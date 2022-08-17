@@ -1,0 +1,76 @@
+.container {
+  padding: var(--padding-xxl) 0;
+  width: 270px;
+  background: linear-gradient(45deg, var(--secondary-color), var(--secondary-color-light));
+  height: 100%;
+  border-radius: var(--border-radius-m);
+  box-shadow: 4px 4px 8px rgba(10, 11, 19, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all .3s;
+  position: sticky;
+}
+
+.wrappedContainer {
+  padding: var(--padding-xxl) 0;
+  width: 64px;
+  background: linear-gradient(45deg, var(--secondary-color), var(--secondary-color-light));
+  height: 100%;
+  border-radius: var(--border-radius-m);
+  box-shadow: 4px 4px 8px rgba(10, 11, 19, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all .3s;
+  position: sticky;
+}
+
+.smallLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.smallLogoImg {
+  width: 36px;
+}
+
+.logoImg {
+  width: 64px;
+  margin-bottom: var(--padding-m);
+}
+
+.logoText {
+  color: white;
+}
+
+.mainMenu {
+  margin-top: var(--padding-xxxl);
+}
+
+.toggleSidebar {
+  position: absolute;
+  top: var(--padding-l);
+  right: var(--padding-m);
+  cursor: pointer;
+}
+
+.toggleSidebar:hover {
+  animation-name: translateToggler;
+  animation-duration: .25s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+@keyframes translateToggler {
+  0%   { transform: translateX(0);}
+  100% { transform: translateX(-8px);}
+}
