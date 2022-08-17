@@ -20,6 +20,7 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "camelcase": "error",
+    "max-len": ["error", 100],
     "spaced-comment": "error",
     "quotes": ["error", "single"],
     "no-duplicate-imports": "error",
@@ -39,38 +40,23 @@
         "ts": "never",
         "tsx": "never"
       }
+    ],
+    "@typescript-eslint/naming-convention": [
+      2,
+      {
+        "selector": "variable",
+        "format": ["camelCase", "UPPER_CASE", "PascalCase", "snake_case"],
+        "leadingUnderscore": "allow"
+      },
+      {
+        "selector": "function",
+        "format": ["camelCase", "PascalCase"]
+      },
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase"]
+      }
     ]
-    //   "import/order": [
-    //     "error",
-    //     {
-    //       "groups": ["builtin", "external", "internal"],
-    //       "pathGroups": [
-    //         {
-    //           "pattern": "react",
-    //           "group": "external",
-    //           "position": "before"
-    //         }
-    //       ],
-    //       "pathGroupsExcludedImportTypes": ["react"],
-    //       "newlines-between": "always"
-    //     }
-    //   ],
-    //   "@typescript-eslint/naming-convention": [
-    //     2,
-    //     {
-    //       "selector": "variable",
-    //       "format": ["camelCase", "UPPER_CASE", "PascalCase", "snake_case"],
-    //       "leadingUnderscore": "allow"
-    //     },
-    //     {
-    //       "selector": "function",
-    //       "format": ["camelCase", "PascalCase"]
-    //     },
-    //     {
-    //       "selector": "typeLike",
-    //       "format": ["PascalCase"]
-    //     }
-    //   ]
   },
   "settings": {
     "import/resolver": {

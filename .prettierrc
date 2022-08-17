@@ -4,7 +4,7 @@
   "printWidth": 100,
   "singleQuote": true,
   "trailingComma": "all",
-  "jsxSingleQuote": true,
+  "jsxSingleQuote": false,
   "bracketSpacing": true,
   "importOrder": [
     "^react$",
@@ -15,8 +15,8 @@
     "^Shared/Types",
     "^Shared/Helpers",
     "^Shared/Constants",
-    "^..",
-    "^."
+    "^../",
+    "^./"
   ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
