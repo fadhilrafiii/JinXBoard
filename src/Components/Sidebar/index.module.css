@@ -58,8 +58,9 @@
 
 .toggleSidebar {
   position: absolute;
-  top: var(--padding-l);
-  right: var(--padding-m);
+  padding: var(--padding-l);
+  top: var(--padding-s);
+  right: 0;
   cursor: pointer;
 }
 
