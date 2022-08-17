@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600&display=swap');
 
 :root {
   /* Colors */
-  --primary-color: #03a55f;
-  --secondary-color: #252a3b;
-  --secondary-color-light: #252a3a;
+  --primary-color: #016439;
+  --primary-color-light: #03a55f;
+  --primary-color-dark: #002f1b;
+  --secondary-color: #222632;
+  --secondary-color-light: #414758;
+  --secondary-color-dark: #17191d;
   --destructive-color: #881D1D;
 
   /* Font Family */
@@ -18,25 +21,30 @@
   --padding-m: 8px;
   --padding-l: 12px;
   --padding-xl: 16px;
-  --padding-xxl: 20px;
-  --padding-xxxl: 24px;
+  --padding-xxl: 24px;
+  --padding-xxxl: 32px;
 
   /* Button Height Size */
   --btn-height-s: 8px;
   --btn-height-m: 12px;
   --btn-height-l: 16px;
+
+  /* Border Radius */
+  --border-radius-s: 4px;
+  --border-radius-m: 8px;
+  --border-radius-l: 12px;
 }
 
-#root {
-  min-width: 640px;
-}
-
-body {
-  margin: 0;
+* {
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6, th {
@@ -45,12 +53,16 @@ h1, h2, h3, h4, h5, h6, th {
   margin: 0;
 }
 
-h1 { font-size: 36px; }
+h1 { font-size: 42px; }
 h2 { font-size: 32px; }
 h3 { font-size: 28px; }
 h4 { font-size: 24px; }
 h5 { font-size: 20px; }
 h6 { font-size: 16px; }
+
+p {
+  margin: 0;
+}
 
 div, p, a, span, li, input, td {
   font-family: var(--font-family-paragraph);
