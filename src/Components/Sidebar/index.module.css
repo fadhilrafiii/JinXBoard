@@ -40,12 +40,15 @@
 }
 
 .smallLogoImg {
+  margin-top: var(--padding-xxxl);
   width: 36px;
+  cursor: pointer;
 }
 
 .logoImg {
   width: 64px;
   margin-bottom: var(--padding-m);
+  cursor: pointer;
 }
 
 .logoText {
@@ -56,22 +59,39 @@
   margin-top: var(--padding-xxxl);
 }
 
-.toggleSidebar {
+.toggleSidebarOpen {
   position: absolute;
-  padding: var(--padding-l);
-  top: var(--padding-s);
-  right: 0;
+  padding: var(--padding-s);
+  top: var(--padding-m);
+  right: var(--padding-s);
   cursor: pointer;
+  transition: all .2s;
 }
 
-.toggleSidebar:hover {
-  animation-name: translateToggler;
-  animation-duration: .25s;
-  animation-iteration-count: 2;
-  animation-direction: alternate;
+.toggleSidebarClose {
+  position: absolute;
+  padding: var(--padding-s);
+  top: var(--padding-l);
+  right: 16px;
+  cursor: pointer;
+  transition: all .2s;
+  transform: rotate(180deg);
 }
 
-@keyframes translateToggler {
-  0%   { transform: translateX(0);}
-  100% { transform: translateX(-8px);}
+.toggleSidebarOpen:hover {
+  background-color: white;
+  border-radius: 100%;
+}
+
+.toggleSidebarOpen:hover > svg{
+  fill: var(--secondary-color);
+}
+
+.toggleSidebarClose:hover {
+  background-color: white;
+  border-radius: 100%;
+}
+
+.toggleSidebarClose:hover > svg{
+  fill: var(--secondary-color);
 }

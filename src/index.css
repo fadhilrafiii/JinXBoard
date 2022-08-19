@@ -72,3 +72,9 @@ div, p, a, span, li, input, td {
 button {
   font-family: var(--font-family-heading);
 }
+
+svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
