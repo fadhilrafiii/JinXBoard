@@ -29,11 +29,13 @@ const BasePage = ({ children }: BasePageProps) => {
 
   return (
     <div className={styles.container}>
-      <Sidebar mainRoutes={mainRoutes} secondaryRoutes={secondaryRoutes} />
+      <div className={styles.sidebarContainer}>
+        <Sidebar mainRoutes={mainRoutes} secondaryRoutes={secondaryRoutes} />
+      </div>
       <div className={styles.pageWrapper}>
         <h3 className={styles.pageTitle}>{pageTitle}</h3>
         <p className={styles.pageSubtitle}>{pageSubtitle}</p>
-        <div className={styles.contentPage}>{children}</div>
+        <div>{children}</div>
       </div>
     </div>
   );

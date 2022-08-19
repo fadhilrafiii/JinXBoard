@@ -2,7 +2,7 @@
   padding: var(--padding-xxl) 0;
   width: 270px;
   background: linear-gradient(45deg, var(--secondary-color), var(--secondary-color-light));
-  height: 100%;
+  height: calc(100vh - 2 * var(--padding-xl));
   border-radius: var(--border-radius-m);
   box-shadow: 4px 4px 8px rgba(10, 11, 19, 0.5);
   display: flex;
@@ -10,13 +10,14 @@
   justify-content: space-between;
   transition: all .3s;
   position: sticky;
+  top: var(--padding-xl);
 }
 
 .wrappedContainer {
   padding: var(--padding-xxl) 0;
   width: 64px;
   background: linear-gradient(45deg, var(--secondary-color), var(--secondary-color-light));
-  height: 100%;
+  height: calc(100vh - var(--padding-xl));
   border-radius: var(--border-radius-m);
   box-shadow: 4px 4px 8px rgba(10, 11, 19, 0.5);
   display: flex;
@@ -24,6 +25,7 @@
   justify-content: space-between;
   transition: all .3s;
   position: sticky;
+  top: var(--padding-xl);
 }
 
 .smallLogo {
@@ -40,7 +42,7 @@
 }
 
 .smallLogoImg {
-  margin-top: var(--padding-xxxl);
+  margin-top: var(--padding-xxl);
   width: 36px;
   cursor: pointer;
 }
@@ -56,7 +58,7 @@
 }
 
 .mainMenu {
-  margin-top: var(--padding-xxxl);
+  margin-top: var(--padding-xxl);
 }
 
 .toggleSidebarOpen {
@@ -72,7 +74,7 @@
   position: absolute;
   padding: var(--padding-s);
   top: var(--padding-l);
-  right: 16px;
+  right: 18px;
   cursor: pointer;
   transition: all .2s;
   transform: rotate(180deg);

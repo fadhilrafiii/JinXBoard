@@ -30,8 +30,8 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
         logoImg: styles.logoImg,
         logo: styles.logo,
         toggleIcon: styles.toggleSidebarOpen,
-        logoWidth: 20,
-        logoHeight: 20,
+        logoWidth: 16,
+        logoHeight: 16,
       };
 
     return {

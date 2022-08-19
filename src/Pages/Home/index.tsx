@@ -1,7 +1,9 @@
 import React from 'react';
 
+import GlassBox from 'Components/GlassBox';
+
 const Home = () => {
-  return <div>This is Home Page!</div>;
+  return <GlassBox>This is Home Page!</GlassBox>;
 };
 
 export default Home;

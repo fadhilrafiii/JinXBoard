@@ -2,6 +2,7 @@ import React from 'react';
 
 import IconName from './constants';
 import { HomeIcon, PeopleIcon } from './Icons';
+import EarthIcon from './Icons/Earth';
 import LeftArrowIcon from './Icons/LeftArrow';
 
 interface IconProps {
@@ -19,6 +20,8 @@ const Icon = ({ name, fill = '#fff', width = 24, height = 24 }: IconProps) => {
       return <PeopleIcon fill={fill} width={width} height={height} />;
     case IconName.LeftArrow:
       return <LeftArrowIcon fill={fill} width={width} height={height} />;
+    case IconName.Earth:
+      return <EarthIcon fill={fill} width={width} height={height} />;
     default:
       return <HomeIcon fill={fill} width={width} height={height} />;
   }

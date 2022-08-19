@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+}
+
+.container * {
+  font-weight: 400;
+}
+
+.subtitle {
+  font-weight: 300;
+  margin-bottom: var(--padding-xl);
+  color: white;
+}
+
+b {
+  color: white;
+  font-weight: 700 !important;
+}
+
+.whatBodyContent {
+  width: 100%;
+}
+
+.whatBodyTitle {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--padding-xxxl)
+}
+
+.whatBodyGoals {
+  display: flex;
+  justify-content: space-between;
+}
+
+.whatBodyGoalsItem {
+  display: flex;
+  align-items: flex-start;
+}
+
+.whatBodyGoalsItem > p {
+  margin-right: var(--padding-xxl);
+}
+
+.iconContainer {
+  margin-bottom: var(--padding-xxl);
+  margin-right: var(--padding-xl);
+}
