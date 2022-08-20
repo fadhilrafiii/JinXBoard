@@ -35,7 +35,7 @@ const BasePage = ({ children }: BasePageProps) => {
       <div className={styles.pageWrapper}>
         <h3 className={styles.pageTitle}>{pageTitle}</h3>
         <p className={styles.pageSubtitle}>{pageSubtitle}</p>
-        <div>{children}</div>
+        {children}
       </div>
     </div>
   );

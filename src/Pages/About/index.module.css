@@ -2,10 +2,6 @@
   width: 100%;
 }
 
-.container * {
-  font-weight: 400;
-}
-
 .subtitle {
   font-weight: 300;
   margin-bottom: var(--padding-xl);
@@ -22,26 +18,65 @@ b {
 }
 
 .whatBodyTitle {
-  font-weight: 400;
+  font-weight: 300;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: var(--padding-xxxl)
+  margin-bottom: var(--padding-xxl)
+}
+
+.whatBodySubtitle {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--padding-xxl)
 }
 
 .whatBodyGoals {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 calc(-1 * var(--padding-l));
 }
 
 .whatBodyGoalsItem {
+  flex: 0 1 calc(100% / 3 - var(--padding-xxxl));
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 var(--padding-l);
 }
 
-.whatBodyGoalsItem > p {
-  margin-right: var(--padding-xxl);
+.verticalDivider {
+  width: 2px;
+  background-color: white;
+}
+
+.whatBodyGoalsItemTitle, .cardContentTitle {
+  margin-bottom: var(--padding-l);
+  text-decoration: underline;
+  text-align: center;
+}
+
+.cardContentTitle:last-child {
+  margin-bottom: 0;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--padding-xl);
+}
+
+.card > div {
+  flex: 1 1 calc(100% / 3 - var(--padding-l));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardDescriptionList {
+  align-self: flex-start;
 }
 
 .iconContainer {
   margin-bottom: var(--padding-xxl);
-  margin-right: var(--padding-xl);
 }

@@ -54,8 +54,8 @@ h1, h2, h3, h4, h5, h6, th {
 }
 
 h1 { font-size: 42px; }
-h2 { font-size: 32px; }
-h3 { font-size: 28px; }
+h2 { font-size: 36px; }
+h3 { font-size: 30px; }
 h4 { font-size: 24px; }
 h5 { font-size: 20px; }
 h6 { font-size: 16px; }
@@ -78,3 +78,25 @@ svg {
   align-items: center;
   justify-content: center;
 }
+
+/* Scrollbar section */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+  border-radius: var(--border-radius-m);
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+  border-radius: var(--border-radius-m);
+  background-color: #e7e7e7;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: white;
+} */
+/* Scrollbar end section */

@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 
+import SidebarItem from './SidebarItem';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { Icon, IconName } from 'Components/Icon';
@@ -7,7 +8,6 @@ import { Icon, IconName } from 'Components/Icon';
 import { Route } from 'Shared/Types';
 
 import styles from './index.module.css';
-import SidebarItem from './SidebarItem';
 
 interface SidebarProps {
   mainRoutes: Route[];
@@ -17,9 +17,9 @@ interface SidebarProps {
 const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
 
-  const onToggleSidebar = () => setIsOpen((prevState) => !prevState);
+  const onToggleSidebar = () => setIsOpen((prevState: boolean) => !prevState);
 
   const onLogoClick = () => navigate('/');
 
@@ -55,7 +55,7 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
       </div>
       <div>
         <div className={eventStyles.logo} onClick={onLogoClick}>
-          <img src="/logo-white.png" className={eventStyles.logoImg} alt="JinxBoard-logo" />
+          <img src="/images/logo-white.png" className={eventStyles.logoImg} alt="JinxBoard-logo" />
           {isOpen && <h5 className={styles.logoText}>JinxBoard</h5>}
         </div>
         <div className={styles.mainMenu}>
