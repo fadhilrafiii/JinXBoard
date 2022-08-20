@@ -15,8 +15,9 @@
     "^Shared/Types",
     "^Shared/Helpers",
     "^Shared/Constants",
-    "^../",
-    "^./"
+    "^[../](.*)(?<!.css)$",
+    "^[./](.*)(?<!.css)$",
+    "(.*)css$"
   ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
