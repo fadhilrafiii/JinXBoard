@@ -1,6 +1,7 @@
 import React from 'react';
 
 import HowSection from './HowSection';
+import OurDevelopers from './OurDevelopers';
 import WhatSection from './WhatSection';
 import WhySection from './WhySection';
 
@@ -16,6 +17,11 @@ const About = () => {
       <br />
       <br />
       <HowSection />
+      <br />
+      <br />
+      <br />
+      <br />
+      <OurDevelopers />
     </div>
   );
 };

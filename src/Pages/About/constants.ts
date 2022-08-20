@@ -1,8 +1,8 @@
 import { IconName } from 'Components/Icon';
 
-import { Content, ContentWithList } from 'Shared/Types/Content';
+import { ContentWithIcon, ContentWithIconAndList, ContentWithImage } from 'Shared/Types/Content';
 
-export const goalsContent: Content[] = [
+export const goalsContent: ContentWithIcon[] = [
   {
     title: 'Health & Safety Environment',
     iconName: IconName.Earth,
@@ -23,7 +23,7 @@ export const goalsContent: Content[] = [
   },
 ];
 
-export const valueContent: ContentWithList[] = [
+export const valueContent: ContentWithIconAndList[] = [
   {
     title: 'Efficient',
     iconName: IconName.IncreaseDiagram,
@@ -41,7 +41,7 @@ export const valueContent: ContentWithList[] = [
   },
 ];
 
-export const featureContent: Content[] = [
+export const featureContent: ContentWithIcon[] = [
   {
     title: 'Smart & Real-time Device Monitoring',
     iconName: IconName.Eye,
@@ -53,5 +53,38 @@ export const featureContent: Content[] = [
   {
     title: 'Integrated and Intuitive Dashboard',
     iconName: IconName.Chart,
+  },
+];
+
+export const developersContent: ContentWithImage[] = [
+  {
+    image: 'images/fadhil.jpg',
+    title: 'Nanda Rizkika R.',
+    description: 'Computer Vision & ML Engineer',
+  },
+  {
+    image: 'images/fadhil.jpg',
+    title: 'M. Fajril Afkaar',
+    description: 'Geothermal Expert & Edge Engineer',
+  },
+  {
+    image: 'images/fadhil.jpg',
+    title: 'Fadhil Muhammad R.',
+    description: 'Fullstack Web Engineer',
+  },
+  {
+    image: 'images/fadhil.jpg',
+    title: 'Nanda Rizkika R.',
+    description: 'Computer Vision & ML Engineer',
+  },
+  {
+    image: 'images/fadhil.jpg',
+    title: 'M. Fajril Afkaar',
+    description: 'Geothermal Expert & Edge Engineer',
+  },
+  {
+    image: 'images/fadhil.jpg',
+    title: 'Fadhil Muhammad R.',
+    description: 'Fullstack Web Engineer',
   },
 ];

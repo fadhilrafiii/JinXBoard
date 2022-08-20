@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { valueContent } from './constants';
-
 import GlassBox from 'Components/GlassBox';
 import { Icon, IconName } from 'Components/Icon';
 import List, { ListType } from 'Components/List';
 
-import { ContentWithList } from 'Shared/Types/Content';
+import { ContentWithIconAndList } from 'Shared/Types/Content';
+
+import { valueContent } from './constants';
 
 import styles from './index.module.css';
 
@@ -17,7 +17,7 @@ const WhySection = () => {
         Why <b>AcProGeo</b>?
       </h4>
       <div className={styles.card}>
-        {valueContent.map(({ title, descriptionList, iconName }: ContentWithList) => {
+        {valueContent.map(({ title, descriptionList, iconName }: ContentWithIconAndList) => {
           return (
             <GlassBox key={title} className={styles.cardContentItem}>
               <div className={styles.iconContainer}>

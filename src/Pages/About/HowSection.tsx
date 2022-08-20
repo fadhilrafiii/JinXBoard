@@ -3,7 +3,7 @@ import React from 'react';
 import GlassBox from 'Components/GlassBox';
 import { Icon } from 'Components/Icon';
 
-import { Content } from 'Shared/Types/Content';
+import { ContentWithIcon } from 'Shared/Types/Content';
 
 import { featureContent } from './constants';
 
@@ -16,7 +16,7 @@ const HowSection = () => {
         How it <b>solves the problem</b>?
       </h4>
       <div className={styles.card}>
-        {featureContent.map(({ title, iconName }: Content) => {
+        {featureContent.map(({ title, iconName }: ContentWithIcon) => {
           return (
             <GlassBox key={title} className={styles.cardContentItem}>
               <div className={styles.iconContainer}>

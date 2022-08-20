@@ -109,6 +109,35 @@ b {
   align-self: flex-start;
 }
 
+.developerCardContainer {
+  padding: var(--padding-xl);
+}
+
+@media (max-width: 836px) {
+  .developerCardContainer {
+    padding: var(--padding-m);
+    min-height: 292px;
+  }
+
+  .developerCard > h4 {
+    font-size: 20px;
+    margin-bottom: var(--padding-s);
+  }
+
+  .developerCard > p {
+    font-size: 14px;
+    margin-bottom: var(--padding-s);
+  }
+}
+
+.developerCard > img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-m);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: var(--padding-l);
+}
+
 .iconContainer {
   margin-bottom: var(--padding-xxl);
 }

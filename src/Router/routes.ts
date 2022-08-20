@@ -10,6 +10,11 @@ export const mainRoutes = [
 
 export const secondaryRoutes = [
   {
+    label: 'Development Plan',
+    path: '/development-plan',
+    iconName: IconName.IncreaseDiagram,
+  },
+  {
     label: 'About Us',
     path: '/about',
     iconName: IconName.People,

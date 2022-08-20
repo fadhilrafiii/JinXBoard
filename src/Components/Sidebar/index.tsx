@@ -7,7 +7,7 @@ import { Icon, IconName } from 'Components/Icon';
 
 import { Route } from 'Shared/Types';
 
-import { SMALL_WINDOW_SIZE } from 'Shared/Constants/General';
+import { MEDIUM_WINDOW_SIZE, SMALL_WINDOW_SIZE } from 'Shared/Constants/General';
 
 import SidebarItem from './SidebarItem';
 
@@ -35,7 +35,7 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
   const onLogoClick = () => navigate('/');
 
   const eventStyles = useMemo(() => {
-    if (isOpen && width > SMALL_WINDOW_SIZE)
+    if (isOpen && width > MEDIUM_WINDOW_SIZE)
       return {
         container: styles.container,
         logoImg: styles.logoImg,
@@ -57,7 +57,7 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
 
   return (
     <div className={eventStyles.container}>
-      {width > SMALL_WINDOW_SIZE && (
+      {width > MEDIUM_WINDOW_SIZE && (
         <div className={eventStyles.toggleIcon} onClick={onToggleSidebar}>
           <Icon
             name={IconName.LeftArrow}
@@ -69,7 +69,7 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
       <div>
         <div className={eventStyles.logo} onClick={onLogoClick}>
           <img src="/images/logo-white.png" className={eventStyles.logoImg} alt="JinxBoard-logo" />
-          {isOpen && width > SMALL_WINDOW_SIZE && <h5 className={styles.logoText}>JinxBoard</h5>}
+          {isOpen && width > MEDIUM_WINDOW_SIZE && <h5 className={styles.logoText}>JinxBoard</h5>}
         </div>
         <div className={styles.mainMenu}>
           {mainRoutes.map(({ iconName, label, path }: Route) => {
@@ -79,7 +79,7 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
                 iconName={iconName}
                 label={label}
                 path={path}
-                isWrapped={!isOpen || width <= SMALL_WINDOW_SIZE}
+                isWrapped={!isOpen || width <= MEDIUM_WINDOW_SIZE}
                 isActive={path === pathname}
               />
             );
@@ -94,7 +94,7 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
               iconName={iconName}
               label={label}
               path={path}
-              isWrapped={!isOpen || width <= SMALL_WINDOW_SIZE}
+              isWrapped={!isOpen || width <= MEDIUM_WINDOW_SIZE}
               isActive={path === pathname}
             />
           );

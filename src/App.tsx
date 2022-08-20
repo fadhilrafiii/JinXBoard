@@ -8,6 +8,7 @@ import Loading from 'Components/Loading';
 
 const Home = lazy(() => import('Pages/Home'));
 const About = lazy(() => import('Pages/About'));
+const DevelopmentPlan = lazy(() => import('Pages/DevelopmentPlan'));
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/development-plan" element={<DevelopmentPlan />} />
           </Routes>
         </Suspense>
       </BasePage>

@@ -96,7 +96,26 @@ svg {
 }
 
 /* Handle on hover */
-/* ::-webkit-scrollbar-thumb:hover {
-  background: white;
-} */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color-light);
+}
 /* Scrollbar end section */
+
+/* React slick section */
+.slick-slide > div > * {
+  width: calc(100% - 2 * var(--padding-s)) !important;
+}
+
+.slick-slider .slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slick-slide {
+  transition: all .5s;
+  transform: scale(0.95);
+}
+
+.slick-slide.slick-current {
+  transform: scale(1);
+}
