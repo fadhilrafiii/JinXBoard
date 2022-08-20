@@ -1,2 +1,14 @@
-export { default as PeopleIcon } from './People';
+export { default as BulletIcon } from './Bullet';
+export { default as ChartIcon } from './Chart';
+export { default as CheckIcon } from './Check';
+export { default as CheckShieldIcon } from './CheckShield';
+export { default as CircuitIcon } from './Circuit';
+export { default as CycleIcon } from './Cycle';
+export { default as EarthIcon } from './Earth';
+export { default as EyeIcon } from './Eye';
 export { default as HomeIcon } from './Home';
+export { default as IncreaseDiagramIcon } from './IncreaseDiagram';
+export { default as LeftArrowIcon } from './LeftArrow';
+export { default as PeopleIcon } from './People';
+export { default as PowerPlantIcon } from './PowerPlant';
+export { default as ThumbIcon } from './Thumb';
