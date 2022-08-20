@@ -9,6 +9,19 @@
   transition: all .2s;
 }
 
+@media (max-width: 400px) {
+  .container {
+    padding: var(--padding-m);
+    border-radius: var(--border-radius-m);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(10, 11, 19, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    position: relative;
+    color: white;
+    transition: all .2s;
+  }
+}
+
 @media (pointer: fine), (pointer: none) {
   .container {
     padding: var(--padding-xxl);

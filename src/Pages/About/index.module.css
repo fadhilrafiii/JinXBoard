@@ -30,24 +30,45 @@ b {
 }
 
 .whatBodyGoals {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 0 calc(-1 * var(--padding-l));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: var(--padding-xxxl) 0
 }
 
 .whatBodyGoalsItem {
-  flex: 0 1 calc(100% / 3 - var(--padding-xxxl));
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0 var(--padding-l);
+  padding: 0 var(--padding-xxl) var(--padding-xxl);
 }
 
-.verticalDivider {
-  width: 2px;
-  background-color: white;
+
+@media (min-width: 1124px) {
+  .whatBodyGoalsItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 var(--padding-xxl) var(--padding-xxl);
+    border-right: 2px solid white;
+  }
+}
+
+@media (max-width: 667px) {
+  .whatBodyGoalsItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 var(--padding-xxl) var(--padding-xxl);
+    border-bottom: 2px solid white;
+  }
+}
+
+.whatBodyGoalsItem:last-child {
+  border: none;
 }
 
 .whatBodyGoalsItemTitle, .cardContentTitle {
@@ -61,16 +82,27 @@ b {
 }
 
 .card {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: var(--padding-xl);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: var(--padding-xl);
 }
 
 .card > div {
-  flex: 1 1 calc(100% / 3 - var(--padding-l));
+  padding: var(--padding-xxl);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 653px) {
+  .card > div {
+    padding: var(--padding-xxl);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .cardDescriptionList {

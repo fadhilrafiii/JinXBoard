@@ -1,11 +1,15 @@
 import React, { useMemo, useState } from 'react';
 
-import SidebarItem from './SidebarItem';
 import { useLocation, useNavigate } from 'react-router-dom';
+import useWindowDimensions from 'Shared/Hooks/useWindowDimensions';
 
 import { Icon, IconName } from 'Components/Icon';
 
 import { Route } from 'Shared/Types';
+
+import { SMALL_WINDOW_SIZE } from 'Shared/Constants/General';
+
+import SidebarItem from './SidebarItem';
 
 import styles from './index.module.css';
 
@@ -17,14 +21,21 @@ interface SidebarProps {
 const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const { width } = useWindowDimensions();
+
   const [isOpen, setIsOpen] = useState<boolean>(true);
 
-  const onToggleSidebar = () => setIsOpen((prevState: boolean) => !prevState);
+  const onToggleSidebar = () =>
+    setIsOpen((prevState: boolean) => {
+      if (width > SMALL_WINDOW_SIZE) return !prevState;
+
+      return false;
+    });
 
   const onLogoClick = () => navigate('/');
 
   const eventStyles = useMemo(() => {
-    if (isOpen)
+    if (isOpen && width > SMALL_WINDOW_SIZE)
       return {
         container: styles.container,
         logoImg: styles.logoImg,
@@ -42,21 +53,23 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
       logoWidth: 12,
       logoHeight: 12,
     };
-  }, [isOpen]);
+  }, [isOpen, width]);
 
   return (
     <div className={eventStyles.container}>
-      <div className={eventStyles.toggleIcon} onClick={onToggleSidebar}>
-        <Icon
-          name={IconName.LeftArrow}
-          width={eventStyles.logoWidth}
-          height={eventStyles.logoHeight}
-        />
-      </div>
+      {width > SMALL_WINDOW_SIZE && (
+        <div className={eventStyles.toggleIcon} onClick={onToggleSidebar}>
+          <Icon
+            name={IconName.LeftArrow}
+            width={eventStyles.logoWidth}
+            height={eventStyles.logoHeight}
+          />
+        </div>
+      )}
       <div>
         <div className={eventStyles.logo} onClick={onLogoClick}>
           <img src="/images/logo-white.png" className={eventStyles.logoImg} alt="JinxBoard-logo" />
-          {isOpen && <h5 className={styles.logoText}>JinxBoard</h5>}
+          {isOpen && width > SMALL_WINDOW_SIZE && <h5 className={styles.logoText}>JinxBoard</h5>}
         </div>
         <div className={styles.mainMenu}>
           {mainRoutes.map(({ iconName, label, path }: Route) => {
@@ -66,7 +79,7 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
                 iconName={iconName}
                 label={label}
                 path={path}
-                isWrapped={!isOpen}
+                isWrapped={!isOpen || width <= SMALL_WINDOW_SIZE}
                 isActive={path === pathname}
               />
             );
@@ -81,7 +94,7 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
               iconName={iconName}
               label={label}
               path={path}
-              isWrapped={!isOpen}
+              isWrapped={!isOpen || width <= SMALL_WINDOW_SIZE}
               isActive={path === pathname}
             />
           );
