@@ -1,6 +1,3 @@
-import PageSubtitle from 'Shared/Constants/PageSubtitle';
-import PageTitle from 'Shared/Constants/PageTitle';
-
 export const getTitleCase = (sentences: string) => {
   const words = sentences.split(' ');
 

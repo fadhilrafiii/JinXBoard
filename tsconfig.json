@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "jsx": "react-jsx",
     "trailing-comma": [
       true,
@@ -29,5 +29,5 @@
       }
     ]
   },
-  "include": ["src"]
+  "include": ["."]
 }

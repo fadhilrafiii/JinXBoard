@@ -1,6 +1,6 @@
 import { IconName } from 'Components/Icon';
 
-import { ContentWithIcon, ContentWithIconAndList, ContentWithImage } from 'Shared/Types/Content';
+import { ContentWithIcon, ContentWithIconAndList, ContentWithImage } from 'Shared/Types';
 
 export const goalsContent: ContentWithIcon[] = [
   {

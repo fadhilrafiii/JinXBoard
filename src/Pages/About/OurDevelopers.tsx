@@ -5,7 +5,7 @@ import useWindowDimensions from 'Shared/Hooks/useWindowDimensions';
 import GlassBox from 'Components/GlassBox';
 import Slider from 'Components/Slider';
 
-import { ContentWithImage } from 'Shared/Types/Content';
+import { ContentWithImage } from 'Shared/Types';
 
 import { LARGE_WINDOW_SIZE, SMALL_WINDOW_SIZE } from 'Shared/Constants/General';
 

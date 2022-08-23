@@ -4,7 +4,7 @@ import GlassBox from 'Components/GlassBox';
 import { Icon, IconName } from 'Components/Icon';
 import List, { ListType } from 'Components/List';
 
-import { ContentWithIconAndList } from 'Shared/Types/Content';
+import { ContentWithIconAndList } from 'Shared/Types';
 
 import { valueContent } from './constants';
 

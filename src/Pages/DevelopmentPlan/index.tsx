@@ -1,9 +1,14 @@
 import React from 'react';
 
-import GlassBox from 'Components/GlassBox';
+// import GlassBox from 'Components/GlassBox';
+import Timeline from 'Components/Timeline';
 
 const DevelopmentPlan = () => {
-  return <GlassBox>This is Development Plan Page!</GlassBox>;
+  return (
+    <div>
+      This is Development Plan Page! <Timeline />
+    </div>
+  );
 };
 
 export default DevelopmentPlan;

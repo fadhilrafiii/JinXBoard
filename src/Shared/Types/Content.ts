@@ -20,3 +20,10 @@ export type ContentWithIconAndList = {
 export type ContentWithImage = {
   image: string;
 } & Content;
+
+export type TimelineContent = {
+  title: string;
+  description: string;
+  date?: string;
+  node: IconName | string;
+};
