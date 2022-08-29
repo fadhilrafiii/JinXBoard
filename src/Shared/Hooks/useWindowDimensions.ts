@@ -1,12 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const getWindowDimensions = () => {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height,
-  };
-};
+import { getWindowDimensions } from 'Shared/Helpers/window';
 
 const useWindowDimensions = () => {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
