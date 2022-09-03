@@ -1,12 +1,12 @@
 import React from 'react';
 
-// import GlassBox from 'Components/GlassBox';
-import Timeline from 'Components/Timeline';
+// import Card from 'Components/Card';
+import Timeline, { TimelineOrientation } from 'Components/Timeline';
 
 const DevelopmentPlan = () => {
   return (
     <div>
-      This is Development Plan Page! <Timeline />
+      This is Development Plan Page! <Timeline orientation={TimelineOrientation.Horizontal} />
     </div>
   );
 };

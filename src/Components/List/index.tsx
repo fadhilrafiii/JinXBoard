@@ -1,5 +1,7 @@
 import React, { HTMLAttributes, ReactNode, useCallback } from 'react';
 
+import { Colors } from 'Shared/Enums';
+
 import { Icon, IconName } from 'Components/Icon';
 
 import styles from './index.module.css';
@@ -14,6 +16,7 @@ interface ListProps extends HTMLAttributes<HTMLDivElement> {
   bulletIconName?: IconName;
   fontSize?: number;
   bulletIconSize?: number;
+  bulletFillColor?: Colors;
   children: ReactNode[];
 }
 
@@ -21,6 +24,7 @@ const List = ({
   listType = ListType.UNORDERED,
   bulletIconName = IconName.Bullet,
   bulletIconSize = 16,
+  bulletFillColor,
   children,
   ...props
 }: ListProps) => {
@@ -30,11 +34,16 @@ const List = ({
 
       return (
         <div className={styles.iconContainer}>
-          <Icon name={bulletIconName} width={bulletIconSize} height={bulletIconSize} />
+          <Icon
+            name={bulletIconName}
+            width={bulletIconSize}
+            height={bulletIconSize}
+            fill={bulletFillColor}
+          />
         </div>
       );
     },
-    [bulletIconName, bulletIconSize, listType],
+    [bulletFillColor, bulletIconName, bulletIconSize, listType],
   );
 
   return (

@@ -33,7 +33,7 @@ const BasePage = ({ children }: BasePageProps) => {
         <Sidebar mainRoutes={mainRoutes} secondaryRoutes={secondaryRoutes} />
       </div>
       <div className={styles.pageWrapper}>
-        <h2 className={styles.pageTitle}>{pageTitle}</h2>
+        <h2>{pageTitle}</h2>
         <p className={styles.pageSubtitle}>{pageSubtitle}</p>
         {children}
       </div>

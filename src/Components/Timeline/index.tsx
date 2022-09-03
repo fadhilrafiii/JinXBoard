@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 
-import GlassBox from 'Components/GlassBox';
+import Card from 'Components/Card';
 import { Icon, IconName } from 'Components/Icon';
 
 import { TimelineContent } from 'Shared/Types';
@@ -48,16 +48,16 @@ const Timeline = ({ orientation }: TimelineProps) => {
           <React.Fragment key={index}>
             {index > 0 && <div className={timelineStyles.connector} />}
             <div className={timelineStyles.timelineNodeContainer}>
-              <GlassBox className={styles.timelineNode}>
+              <Card className={styles.timelineNode}>
                 {node in IconName ? <Icon name={node} /> : node}
-              </GlassBox>
+              </Card>
               {index % 1 === 1 && <div className={timelineStyles.evenDescriptionConnector} />}
               <div className={timelineStyles.detailTimelineContainer}>
                 <p>{date}</p>
-                <GlassBox className={styles.detailTimeline}>
+                <Card className={styles.detailTimeline}>
                   <h5>{title}</h5>
                   <p>{description}</p>
-                </GlassBox>
+                </Card>
               </div>
             </div>
           </React.Fragment>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import IconSVGProps from '../types';
+import { IconSVGProps } from '../types';
 
 const CheckShieldIcon = ({ fill, width, height }: IconSVGProps) => {
   return (

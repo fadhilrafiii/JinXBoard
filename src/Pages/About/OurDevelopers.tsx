@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import useWindowDimensions from 'Shared/Hooks/useWindowDimensions';
 
-import GlassBox from 'Components/GlassBox';
 import Slider from 'Components/Slider';
 
 import { ContentWithImage } from 'Shared/Types';
@@ -15,6 +14,7 @@ import styles from './index.module.css';
 
 const OurDevelopers = () => {
   const { width } = useWindowDimensions();
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   let numberOfSlides = 3;
   if (width <= SMALL_WINDOW_SIZE) numberOfSlides = 1;
@@ -26,15 +26,24 @@ const OurDevelopers = () => {
         <b>Our Developers</b>
       </h2>
       <Slider slidesToShow={numberOfSlides} isCenter isInfinite shouldAutoPlay>
-        {developersContent.map(({ image, title, description }: ContentWithImage) => {
+        {developersContent.map(({ image, title, description }: ContentWithImage, index: number) => {
           return (
-            <GlassBox key={title} className={styles.developerCardContainer}>
-              <div className={styles.developerCard}>
-                <img src={image} alt={title} />
+            <div
+              key={title}
+              className={styles.developerCard}
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              <img
+                src={image}
+                alt={title}
+                className={index === hoveredCard ? styles.hovered : ''}
+              />
+              <div className={styles.developerText}>
                 <h4>{title}</h4>
                 <p>{description}</p>
               </div>
-            </GlassBox>
+            </div>
           );
         })}
       </Slider>

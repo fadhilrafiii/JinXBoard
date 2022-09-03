@@ -13,7 +13,9 @@ const About = () => {
       <WhatSection />
       <br />
       <br />
+      <br />
       <WhySection />
+      <br />
       <br />
       <br />
       <HowSection />

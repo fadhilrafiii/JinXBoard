@@ -1,6 +1,8 @@
 import React from 'react';
 
-import GlassBox from 'Components/GlassBox';
+import { Colors } from 'Shared/Enums';
+
+import Card from 'Components/Card';
 import { Icon } from 'Components/Icon';
 
 import { ContentWithIcon } from 'Shared/Types/Content';
@@ -12,18 +14,18 @@ import styles from './index.module.css';
 const HowSection = () => {
   return (
     <>
-      <h4 className={styles.subtitle}>
-        How it <b>solves the problem</b>?
-      </h4>
+      <h3 className={styles.subtitle}>
+        How <b className={styles.green}>AcProGeo</b> solves the problem?
+      </h3>
       <div className={styles.card}>
         {featureContent.map(({ title, iconName }: ContentWithIcon) => {
           return (
-            <GlassBox key={title} className={styles.cardContentItem}>
+            <Card key={title} className={styles.cardContentItem}>
               <div className={styles.iconContainer}>
-                <Icon name={iconName} width={80} height={80} />
+                <Icon name={iconName} width={80} height={80} fill={Colors.Primary} />
               </div>
               <h4 className={styles.cardContentTitle}>{title}</h4>
-            </GlassBox>
+            </Card>
           );
         })}
       </div>
