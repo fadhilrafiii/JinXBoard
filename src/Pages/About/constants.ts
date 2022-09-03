@@ -73,17 +73,17 @@ export const developersContent: ContentWithImage[] = [
     description: 'Fullstack Web Engineer',
   },
   {
-    image: 'images/fadhil.jpg',
+    image: '/images/fadhil.jpg',
     title: 'Nanda Rizkika R.',
     description: 'Computer Vision & ML Engineer',
   },
   {
-    image: 'images/fadhil.jpg',
+    image: '/images/fadhil.jpg',
     title: 'M. Fajril Afkaar',
     description: 'Geothermal Expert & Edge Engineer',
   },
   {
-    image: 'images/fadhil.jpg',
+    image: '/images/fadhil.jpg',
     title: 'Fadhil Muhammad R.',
     description: 'Fullstack Web Engineer',
   },
