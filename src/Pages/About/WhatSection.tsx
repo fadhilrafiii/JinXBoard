@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Colors } from 'Shared/Enums';
-
 import Card from 'Components/Card';
 import { Icon } from 'Components/Icon';
 
@@ -29,7 +27,7 @@ const WhatSection = () => {
           {goalsContent.map(({ title, iconName, description }: ContentWithIcon, index: number) => (
             <Card key={index} className={styles.whatBodyGoalsItem}>
               <div className={styles.iconContainer}>
-                <Icon name={iconName} width={80} height={80} fill={Colors.Primary} />
+                <Icon name={iconName} width={80} height={80} />
               </div>
               <div>
                 <h5 className={styles.whatBodyGoalsItemTitle}>{title}</h5>

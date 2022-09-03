@@ -13,6 +13,7 @@
     "^Layout",
     "^Components",
     "^Shared/Types",
+    "^Shared/Enums",
     "^Shared/Helpers",
     "^Shared/Constants",
     "^[../](.*)(?<!.css)$",

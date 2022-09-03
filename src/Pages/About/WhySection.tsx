@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Colors } from 'Shared/Enums';
-
 import Card from 'Components/Card';
 import { Icon, IconName } from 'Components/Icon';
 import List, { ListType } from 'Components/List';
@@ -23,17 +21,18 @@ const WhySection = () => {
           return (
             <Card key={title} className={styles.cardContentItem}>
               <div className={styles.iconContainer}>
-                <Icon name={iconName} width={80} height={80} fill={Colors.Primary} />
+                <Icon name={iconName} width={80} height={80} />
               </div>
               <h5 className={styles.cardContentTitle}>{title}</h5>
               <List
                 listType={ListType.UNORDERED}
                 bulletIconName={IconName.Check}
-                bulletFillColor={Colors.SecondaryDark}
                 className={styles.cardDescriptionList}
               >
                 {descriptionList.map((desc: string, index: number) => (
-                  <div key={index}>{desc}</div>
+                  <div className={styles.cardDescriptionListItem} key={index}>
+                    {desc}
+                  </div>
                 ))}
               </List>
             </Card>

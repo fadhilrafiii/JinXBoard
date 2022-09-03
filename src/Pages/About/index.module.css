@@ -38,58 +38,20 @@
   align-items: center;
   text-align: center;
   padding: var(--padding-xxl);
-  /* background: var(--bg-radial-primary); */
-  background-color: white;
-}
-
-
-@media (min-width: 1124px) {
-  .whatBodyGoalsItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: var(--padding-xxl);
-    border-right: 2px solid white;
-  }
-}
-
-@media (max-width: 667px) {
-  .whatBodyGoalsItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: var(--padding-xxl);
-    border-bottom: 2px solid white;
-  }
-}
-
-.whatBodyGoalsItem:last-child {
-  border: none;
+  background: var(--bg-radial-primary);
 }
 
 .whatBodyGoalsItemTitle {
   margin-bottom: var(--padding-l);
   text-align: center;
-  color: var(--primary-color);
+  color: white;
   font-weight: 600;
-}
-
-.cardContentTitle {
-  margin-bottom: var(--padding-l);
-  text-decoration: underline;
-  text-align: center;
-  color: var(--primary-color);
 }
 
 .whatBodyGoalsItemDesc {
   padding-top: var(--padding-m);
-  border-top: 1px solid var(--secondary-color);
-}
-
-.cardContentTitle:last-child {
-  margin-bottom: 0;
+  border-top: 1px solid white;
+  color: white;
 }
 
 .card {
@@ -105,6 +67,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: var(--bg-radial-primary);
 }
 
 @media (max-width: 653px) {
@@ -117,8 +80,23 @@
   }
 }
 
+.cardContentTitle {
+  margin-bottom: var(--padding-l);
+  text-decoration: underline;
+  text-align: center;
+  color: white;
+}
+
 .cardDescriptionList {
   align-self: flex-start;
+}
+
+.cardDescriptionListItem {
+  color: white;
+}
+
+.cardContentTitle:last-child {
+  margin-bottom: 0;
 }
 
 .developerCard > img {

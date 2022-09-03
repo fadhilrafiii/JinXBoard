@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Colors } from 'Shared/Enums';
-
 import Card from 'Components/Card';
 import { Icon } from 'Components/Icon';
 
@@ -22,7 +20,7 @@ const HowSection = () => {
           return (
             <Card key={title} className={styles.cardContentItem}>
               <div className={styles.iconContainer}>
-                <Icon name={iconName} width={80} height={80} fill={Colors.Primary} />
+                <Icon name={iconName} width={80} height={80} />
               </div>
               <h4 className={styles.cardContentTitle}>{title}</h4>
             </Card>
