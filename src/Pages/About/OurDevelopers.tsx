@@ -15,7 +15,7 @@ import styles from './index.module.css';
 const OurDevelopers = () => {
   const { width } = useWindowDimensions();
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
+  console.log(width);
   let numberOfSlides = 3;
   if (width <= SMALL_WINDOW_SIZE) numberOfSlides = 1;
   else if (width <= LARGE_WINDOW_SIZE) numberOfSlides = 2;
