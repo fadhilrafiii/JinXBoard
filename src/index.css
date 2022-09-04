@@ -4,8 +4,12 @@
 :root {
   /* Colors */
   --primary-color: #016439;
+  --primary-color-80: rgba(1, 100, 57, 0.80);
   --primary-color-light: #03a55f;
+  --primary-color-light-80: rgba(3, 165, 95, 0.80);
+  --primary-color-light-60: rgba(3, 165, 95, 0.60);
   --primary-color-dark: #002f1b;
+
   --secondary-color: #222632;
   --secondary-color-light: #414758;
   --secondary-color-dark: #17191d;
@@ -37,9 +41,10 @@
 
   /* Box Shadow */
   --box-shadow: 0px 10px 13px -7px #000000a4, 0px -4px 13px -7px #00000045, 5px 5px 15px 5px rgba(0,0,0,0);
+  --text-shadow: 2px 2px 4px -7px #000000a4;
 
   /* Background Gradient */
-  --bg-radial-primary: radial-gradient(circle at -10% 25.5%, var(--primary-color-light) 0%, var(--primary-color) 75%);
+  --bg-radial-primary: radial-gradient(circle at -10% 25.5%, var(--primary-color-light-80) 0%, var(--primary-color-80) 75%);
   --bg-linear-secondary: linear-gradient(45deg, var(--secondary-color), var(--secondary-color-light));
 }
 

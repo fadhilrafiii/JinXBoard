@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 
-import { useSelector } from 'react-redux';
 import useWindowDimensions from 'Shared/Hooks/useWindowDimensions';
-
-import { RootState } from 'Redux/Store';
 
 import Slider from 'Components/Slider';
 
@@ -16,8 +13,7 @@ import { developersContent } from './constants';
 import styles from './index.module.css';
 
 const OurDevelopers = () => {
-  const isSidebarOpen = useSelector((state: RootState) => state.sidebar.isOpen);
-  const { width } = useWindowDimensions(isSidebarOpen);
+  const { width } = useWindowDimensions();
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   let numberOfSlides = 3;

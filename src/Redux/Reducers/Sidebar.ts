@@ -1,6 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { getWindowDimensions, isMediumWindow, isSmallWindow } from 'Shared/Helpers/window';
+import { getWindowDimensions } from 'Shared/Helpers/window';
+
+import { MEDIUM_WINDOW_SIZE } from 'Shared/Constants/General';
 
 export type SidebarState = {
   isOpen: boolean;
@@ -8,7 +10,7 @@ export type SidebarState = {
 const { width } = getWindowDimensions();
 
 const sidebarInitialState: SidebarState = {
-  isOpen: isMediumWindow(width) || isSmallWindow(width) ? false : true,
+  isOpen: width < MEDIUM_WINDOW_SIZE ? false : true,
 };
 
 export const sidebarSlice = createSlice({

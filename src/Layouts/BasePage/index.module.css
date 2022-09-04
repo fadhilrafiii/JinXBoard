@@ -25,11 +25,12 @@
 
 .backgroundLogo {
   position: fixed;
-  width: 40vw;
+  width: max(40vw, 600px);
   opacity: 0.1;
   top: 50%;
-  left: calc(50% + 135px);
+  left: 50%;
   transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 .pageSubtitle {

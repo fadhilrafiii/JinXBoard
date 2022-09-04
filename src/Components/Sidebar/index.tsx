@@ -29,12 +29,9 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
 
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const { width } = useWindowDimensions(isOpen);
+  const { width } = useWindowDimensions();
 
-  const shouldShowDesktopSidebar = useMemo(
-    () => !isMediumWindow(width) && !isSmallWindow(width),
-    [width],
-  );
+  const shouldShowDesktopSidebar = !isMediumWindow(width) && !isSmallWindow(width);
 
   const onToggleSidebar = () => {
     if (isOpen) dispatch(actionCloseSidebar());
@@ -54,8 +51,6 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
     if (isSmallWindow(width)) onToggleSidebar();
   };
 
-  console.log(width);
-  console.log('isopen', isOpen);
   const eventStyles = useMemo(() => {
     if (isOpen)
       return {
@@ -78,8 +73,6 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
       mainMenu: !isSmallWindow(width) ? styles.mainMenu : styles.mainMenuHidden,
     };
   }, [isOpen, width]);
-
-  console.log(eventStyles);
 
   return (
     <div className={eventStyles.container}>
