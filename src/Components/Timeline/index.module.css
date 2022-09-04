@@ -3,16 +3,48 @@
   position: relative;
 }
 
+.textNode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  width: 56px;
+  color: var(--primary-color);
+}
+
+.listDesc {
+  color: var(--secondary-color);
+}
+
 .detailTimeline {
   padding: var(--padding-xl);
   padding-bottom: var(--padding-xxl);
   border: 2px solid var(--primary-color);
-  /* background: var(--bg-radial-primary); */
+  transition: all .2s;
 }
 
 .detailTimeline > h5 {
   margin-bottom: var(--padding-l);
   color: var(--primary-color);
+}
+
+@media (max-width: 800px) {
+  .detailTimeline > h5 {
+    font-size: 16px;
+  }
+
+  .detailTimeline div {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+}
+
+.hoveredNode {
+  z-index: 10 !important;
+}
+
+.hoveredNode .detailTimeline {
+  background-color: white;
 }
 /* End of General Styling */
 
@@ -29,10 +61,10 @@
 .oddHorizontalTimelineNode {
   border-radius: var(--border-radius-circle);
   position: relative;
-  background-color: white;
   padding: var(--padding-l);
   border: 6px solid var(--primary-color);
   background-color: white;
+  pointer-events: none;
 }
 
 .oddHorizontalTimelineNode::before {
@@ -65,7 +97,7 @@
   position: relative;
   padding: var(--padding-l);
   border: 6px solid var(--primary-color);
-  background-color: white;
+  pointer-events: none;
 }
 
 .evenHorizontalTimelineNode::before {
@@ -120,7 +152,7 @@
 .horizontalDetailTimelineContainer.evenHorizontalContainer {
   position: absolute;
   left: 50%;
-  bottom: -105%;
+  bottom: -100%;
   transform: translate(-50%, 100%);
 }
 
@@ -157,10 +189,9 @@
 .oddVerticalTimelineNode {
   border-radius: var(--border-radius-circle);
   position: relative;
-  background-color: white;
   padding: var(--padding-l);
   border: 6px solid var(--primary-color);
-  background-color: white;
+  cursor: pointer;
 }
 
 .oddVerticalTimelineNode::before {
@@ -193,7 +224,7 @@
   position: relative;
   padding: var(--padding-l);
   border: 6px solid var(--primary-color);
-  background-color: white;
+  cursor: pointer;
 }
 
 .evenVerticalTimelineNode::before {

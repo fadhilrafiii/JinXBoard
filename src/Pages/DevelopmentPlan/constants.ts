@@ -1,31 +1,36 @@
-import { IconName } from 'Components/Icon';
-
 import { TimelineContent } from 'Shared/Types';
 
 export const timelineContent: TimelineContent[] = [
   {
-    node: IconName.Eye,
-    title: 'Timeline Title',
-    description: 'Timeline description. This is an example of timeline description',
+    node: '1st',
+    title: 'Minimum Viable Product',
+    descriptionList: [
+      'JinXVision: Smart Camera',
+      'JinXH2S: H2S Monitoring',
+      'JinXBoard: Dashboard Web',
+      'JinXFlo: Production Optimization',
+      'JinXBay: Power Plant Monitoring',
+    ],
   },
   {
-    node: IconName.Eye,
-    title: 'Timeline Title',
-    description: 'Timeline description. This is an example of timeline description',
+    node: '2nd',
+    title: 'Product Lifetime Stage',
+    descriptionList: [
+      'JinXjectivity: Automated Injection',
+      'JinXH2S: Scaling Formation Prediction',
+      'Machine Learning Optimization',
+      'Further JinXBoard Integration',
+    ],
   },
   {
-    node: IconName.Eye,
-    title: 'Timeline Title',
-    description: 'Timeline description. This is an example of timeline description',
-  },
-  {
-    node: IconName.Eye,
-    title: 'Timeline Title',
-    description: 'Timeline description. This is an example of timeline description',
-  },
-  {
-    node: IconName.Eye,
-    title: 'Timeline Title',
-    description: 'Timeline description. This is an example of timeline description',
+    node: '3rd',
+    title: 'Final Stage Development',
+    descriptionList: [
+      'JinXVision: Smart Camera',
+      'JinXH2S: H2S Monitoring',
+      'JinXBoard: Dashboard Web',
+      'JinXFlo: Production Optimization',
+      'JinXBay: Power Plant Monitoring',
+    ],
   },
 ];
