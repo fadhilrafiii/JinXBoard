@@ -1,0 +1,143 @@
+/* General Styling */
+.timelineItemContainer {
+  position: relative;
+}
+
+.detailTimeline {
+  padding: var(--padding-xl);
+  padding-bottom: var(--padding-xxl);
+  border: 2px solid var(--primary-color);
+  /* background: var(--bg-radial-primary); */
+}
+
+.detailTimeline > h5 {
+  margin-bottom: var(--padding-l);
+  color: var(--primary-color);
+}
+/* End of General Styling */
+
+/* Horizontal Styling */
+.horizontalTimelineContainer {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: var(--padding-xl);
+}
+
+.oddHorizontalTimelineNode {
+  border-radius: var(--border-radius-circle);
+  position: relative;
+  background-color: white;
+  padding: var(--padding-l);
+  border: 6px solid var(--primary-color);
+  background-color: white;
+}
+
+.oddHorizontalTimelineNode::before {
+  content: '';
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100px;
+  top: -105px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  z-index: -1;
+}
+
+.oddHorizontalTimelineNode::after {
+  content: '';
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -110px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  z-index: -1;
+}
+
+.evenHorizontalTimelineNode {
+  border-radius: var(--border-radius-circle);
+  position: relative;
+  padding: var(--padding-l);
+  border: 6px solid var(--primary-color);
+  background-color: white;
+}
+
+.evenHorizontalTimelineNode::before {
+  content: '';
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100px;
+  bottom: -105px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  z-index: -1;
+}
+
+.evenHorizontalTimelineNode::after {
+  content: '';
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -110px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  z-index: -1;
+}
+
+.horizontalDetailTimelineContainer {
+  width: min(25vw, 360px);
+}
+
+.horizontalDetailTimelineContainer.oddHorizontalContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, calc(-100% - 130px));
+  z-index: 4;
+}
+
+.timelineItemContainer:first-child .horizontalDetailTimelineContainer.oddHorizontalContainer {
+  transform: translate(0, calc(-100% - 130px));
+  left: 0;
+}
+
+.timelineItemContainer:last-child .horizontalDetailTimelineContainer.oddHorizontalContainer {
+  transform: translate(-100%, calc(-100% - 130px));
+  left: 100%;
+}
+
+.horizontalDetailTimelineContainer.evenHorizontalContainer {
+  position: absolute;
+  left: 50%;
+  bottom: -100%;
+  transform: translate(-50%, 100%);
+  z-index: 4;
+}
+
+.timelineItemContainer:first-child .horizontalDetailTimelineContainer.evenHorizontalContainer {
+  transform: translate(0, 100%);
+  left: 0;
+}
+
+.timelineItemContainer:last-child .horizontalDetailTimelineContainer.evenHorizontalContainer {
+  transform: translate(-100%, 100%);
+  left: 100%;
+}
+
+.horizontalConnector {
+  height: 6px;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+
+
