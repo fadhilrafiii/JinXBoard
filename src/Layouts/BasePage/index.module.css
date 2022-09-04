@@ -1,19 +1,35 @@
 .container {
   padding: var(--padding-xl);
+  padding-right: 0;
   display: flex;
   position: relative;
   height: 100vh;
   background: white;
+  z-index: -2;
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: 0;
+  }
 }
 
 .pageWrapper {
-  padding-top: var(--padding-l);
-  padding-left: var(--padding-xl);
+  padding: var(--padding-l) var(--padding-xl) 0;
   flex-grow: 1;
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
   direction: ltr !important;  
+}
+
+.backgroundLogo {
+  position: fixed;
+  width: 40vw;
+  opacity: 0.1;
+  top: 50%;
+  left: calc(50% + 135px);
+  transform: translate(-50%, -50%);
 }
 
 .pageSubtitle {

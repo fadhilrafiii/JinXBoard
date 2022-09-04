@@ -122,6 +122,7 @@
   padding: var(--padding-m);
   bottom: var(--padding-xxxl);
   left: var(--padding-xl);
+  width: calc(100% - 2 * var(--pading-xl));
 }
 
 .developerText > h4 {
@@ -135,6 +136,14 @@
 }
 
 @media (max-width: 836px) {
+  .developerText {
+    position: absolute;
+    padding: var(--padding-m);
+    bottom: var(--padding-xxl);
+    left: var(--padding-m);
+    width: calc(100% - 2 * var(--padding-l));
+  }
+
   .developerText > h4 {
     font-size: 20px;
     margin-bottom: var(--padding-s);

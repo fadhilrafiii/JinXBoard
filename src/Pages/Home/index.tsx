@@ -1,9 +1,7 @@
 import React from 'react';
 
-import Card from 'Components/Card';
-
 const Home = () => {
-  return <Card>This is Home Page!</Card>;
+  return <div>This is Home Page!</div>;
 };
 
 export default Home;

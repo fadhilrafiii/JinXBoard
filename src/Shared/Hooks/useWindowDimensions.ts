@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 
 import { getWindowDimensions } from 'Shared/Helpers/window';
 
-const useWindowDimensions = () => {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+const useWindowDimensions = (isSidebarOpen?: boolean) => {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions(isSidebarOpen));
 
   useEffect(() => {
     const handleResize = () => {

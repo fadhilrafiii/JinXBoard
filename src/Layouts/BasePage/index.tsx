@@ -35,6 +35,7 @@ const BasePage = ({ children }: BasePageProps) => {
       <div className={styles.pageWrapper}>
         <h2>{pageTitle}</h2>
         <p className={styles.pageSubtitle}>{pageSubtitle}</p>
+        <img className={styles.backgroundLogo} src="/images/logo512.png" />
         {children}
       </div>
     </div>
