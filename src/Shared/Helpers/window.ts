@@ -1,22 +1,16 @@
 import {
   LARGE_WINDOW_SIZE,
-  MEDIUM_WINDOW_SIZE,
-  SIDEBAR_WIDTH,
-  SIDEBAR_WRAPPED_WIDTH,
+  MEDIUM_WINDOW_SIZE, // SIDEBAR_WIDTH,
+  // SIDEBAR_WRAPPED_WIDTH,
   SMALL_WINDOW_SIZE,
 } from 'Shared/Constants/General';
 
 export const getWindowDimensions = (isSidebarOpen?: boolean) => {
-  let { innerWidth: width } = window;
-
-  if (width > SMALL_WINDOW_SIZE) {
-    if (isSidebarOpen) width = width - SIDEBAR_WIDTH;
-    else width = width - SIDEBAR_WRAPPED_WIDTH;
-  }
-
+  console.log(isSidebarOpen);
+  const { innerWidth: width, innerHeight: height } = window;
   return {
     width,
-    height: window.innerHeight,
+    height,
   };
 };
 

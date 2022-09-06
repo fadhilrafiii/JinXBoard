@@ -25,7 +25,7 @@
 
 .backgroundLogo {
   position: fixed;
-  width: max(40vw, 600px);
+  width: max(40vw, 300px);
   opacity: 0.1;
   top: 50%;
   left: 50%;

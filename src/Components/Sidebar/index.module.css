@@ -4,11 +4,11 @@
   background: var(--bg-linear-secondary);
   height: calc(100vh - 2 * var(--padding-xl));
   border-radius: var(--border-radius-m);
-  box-shadow: 2px 0 4px rgba(125, 125, 125, 0.5), -2px 0 4px rgba(125, 125, 125, 0.5), 0 2px 4px rgba(125, 125, 125, 0.5), 0 -2px 4px rgba(125, 125, 125, 0.5);
+  box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all .3s;
+  transition: all .2s;
   position: sticky;
   top: var(--padding-xl);
   z-index: 100;
@@ -20,11 +20,11 @@
   background: linear-gradient(45deg, var(--secondary-color), var(--secondary-color-light));
   height: calc(100vh - 2 * var(--padding-xl));
   border-radius: var(--border-radius-m);
-  box-shadow: 4px 4px 8px rgba(10, 11, 19, 0.5);
+  box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all .3s;
+  transition: all .2s;
   position: sticky;
   top: var(--padding-xl);
 }

@@ -45,6 +45,15 @@
 
 .hoveredNode .detailTimeline {
   background-color: white;
+  transform: scale(1.5);
+}
+
+.oddVerticalContainer.hoveredNode .detailTimeline {
+  transform-origin: right top;
+}
+
+.evenVerticalContainer.hoveredNode .detailTimeline {
+  transform-origin: left top;
 }
 /* End of General Styling */
 
@@ -192,6 +201,7 @@
   padding: var(--padding-l);
   border: 6px solid var(--primary-color);
   cursor: pointer;
+  background-color: white;
 }
 
 .oddVerticalTimelineNode::before {
@@ -225,6 +235,7 @@
   padding: var(--padding-l);
   border: 6px solid var(--primary-color);
   cursor: pointer;
+  background-color: white;
 }
 
 .evenVerticalTimelineNode::before {
@@ -254,7 +265,6 @@
 }
 
 .verticalDetailTimelineContainer {
-  width: 165px;
   padding-bottom: var(--padding-xxl);
   z-index: -3;
 }
@@ -263,14 +273,14 @@
   position: absolute;
   left: 10vw;
   top: 110%;
-  transform: translateX(5vw);
+  transform: translateX(min(10vw, 20px));
 }
 
 .verticalDetailTimelineContainer.evenVerticalContainer {
   position: absolute;
   right: 10vw;
   top: 110%;
-  transform: translate(-5vw, 0);
+  transform: translate(max(-10vw, -20px), 0);
 }
 
 .verticalConnector {

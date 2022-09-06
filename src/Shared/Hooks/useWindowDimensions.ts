@@ -12,12 +12,13 @@ const useWindowDimensions = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowDimensions(getWindowDimensions());
+      setWindowDimensions(getWindowDimensions(isSidebarOpen));
     };
 
+    setWindowDimensions(getWindowDimensions(isSidebarOpen));
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [isSidebarOpen]);
 
   return windowDimensions;
 };

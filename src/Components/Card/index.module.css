@@ -1,18 +1,12 @@
 .container {
   padding: var(--padding-xxl);
   border-radius: var(--border-radius-m);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  box-shadow: var(--box-shadow);
 }
 
 @media (max-width: 400px) {
   .container {
     padding: var(--padding-m);
-    border-radius: var(--border-radius-m);
-    box-shadow: var(--box-shadow);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
   }
 }
 

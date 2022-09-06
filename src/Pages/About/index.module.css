@@ -111,7 +111,7 @@
   filter: brightness(50%);
   -webkit-filter: brightness(50%);
   position: relative;
-  transition: all .2s;
+  transition: all .1s;
 }
 
 .hovered {

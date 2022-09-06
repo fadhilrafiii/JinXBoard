@@ -55,7 +55,6 @@ const Icon = ({ name, fill = '#fff', width = 24, height = 24 }: IconProps) => {
       return <PowerPlantIcon fill={fill} width={width} height={height} />;
     case IconName.Thumb:
       return <ThumbIcon fill={fill} width={width} height={height} />;
-
     default:
       return <HomeIcon fill={fill} width={width} height={height} />;
   }

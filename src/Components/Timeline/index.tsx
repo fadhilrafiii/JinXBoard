@@ -1,5 +1,7 @@
 import React, { useMemo, useState } from 'react';
 
+import useWindowDimensions from 'Shared/Hooks/useWindowDimensions';
+
 import Card from 'Components/Card';
 import { Icon, IconName } from 'Components/Icon';
 import List, { ListType } from 'Components/List';
@@ -20,6 +22,7 @@ interface TimelineProps {
 }
 
 const Timeline = ({ orientation, timelineContent }: TimelineProps) => {
+  const { width } = useWindowDimensions();
   const [hoveredNode, setHoveredNode] = useState<number | null>(null);
 
   const timelineStyles = useMemo(() => {
@@ -72,6 +75,8 @@ const Timeline = ({ orientation, timelineContent }: TimelineProps) => {
                   }
                   onMouseEnter={() => setHoveredNode(index)}
                   onMouseLeave={() => setHoveredNode(null)}
+                  onClick={() => setHoveredNode(index)}
+                  onBlur={() => setHoveredNode(null)}
                 >
                   {node in IconName ? (
                     <Icon name={node} fill={Colors.Primary} height={48} width={48} />
@@ -79,7 +84,13 @@ const Timeline = ({ orientation, timelineContent }: TimelineProps) => {
                     <h2 className={styles.textNode}>{node}</h2>
                   )}
                 </Card>
-                <div className={detailContainerStyles.join(' ')}>
+                <div
+                  style={{
+                    width: width / 3.5,
+                    minWidth: 165,
+                  }}
+                  className={detailContainerStyles.join(' ')}
+                >
                   <p>{date}</p>
                   <Card className={styles.detailTimeline}>
                     <h5>{title}</h5>

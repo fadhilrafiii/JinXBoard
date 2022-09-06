@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -13,6 +13,8 @@ import { Icon, IconName } from 'Components/Icon';
 import { Route } from 'Shared/Types';
 
 import { isMediumWindow, isSmallWindow } from 'Shared/Helpers/window';
+
+import { MEDIUM_WINDOW_SIZE } from 'Shared/Constants/General';
 
 import SidebarItem from './SidebarItem';
 
@@ -50,6 +52,10 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
 
     if (isSmallWindow(width)) onToggleSidebar();
   };
+
+  useEffect(() => {
+    if (width <= MEDIUM_WINDOW_SIZE) dispatch(actionCloseSidebar());
+  }, [dispatch, width]);
 
   const eventStyles = useMemo(() => {
     if (isOpen)
