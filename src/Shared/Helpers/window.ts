@@ -9,11 +9,13 @@ import {
 export const getWindowDimensions = (isSidebarOpen?: boolean) => {
   let { innerWidth: width } = window;
 
-  if (isSidebarOpen) width = width - SIDEBAR_WIDTH;
-  else width = width = width - SIDEBAR_WRAPPED_WIDTH;
+  let layoutWidth = width;
+  if (isSidebarOpen) layoutWidth = width - SIDEBAR_WIDTH;
+  else width = layoutWidth = width - SIDEBAR_WRAPPED_WIDTH;
 
   return {
     width,
+    layoutWidth,
     height: window.innerHeight,
   };
 };

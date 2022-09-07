@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -33,7 +33,7 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
   const { pathname } = useLocation();
   const { width } = useWindowDimensions();
 
-  const shouldShowDesktopSidebar = !isMediumWindow(width) && !isSmallWindow(width);
+  const shouldShowDesktopSidebar = width > MEDIUM_WINDOW_SIZE;
 
   const onToggleSidebar = () => {
     if (isOpen) dispatch(actionCloseSidebar());
@@ -52,10 +52,6 @@ const Sidebar = ({ mainRoutes, secondaryRoutes }: SidebarProps) => {
 
     if (isSmallWindow(width)) onToggleSidebar();
   };
-
-  useEffect(() => {
-    if (width <= MEDIUM_WINDOW_SIZE) dispatch(actionCloseSidebar());
-  }, [dispatch, width]);
 
   const eventStyles = useMemo(() => {
     if (isOpen)

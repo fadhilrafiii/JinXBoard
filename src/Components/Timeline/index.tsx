@@ -22,7 +22,7 @@ interface TimelineProps {
 }
 
 const Timeline = ({ orientation, timelineContent }: TimelineProps) => {
-  const { width } = useWindowDimensions();
+  const { layoutWidth } = useWindowDimensions();
   const [hoveredNode, setHoveredNode] = useState<number | null>(null);
 
   const timelineStyles = useMemo(() => {
@@ -51,8 +51,6 @@ const Timeline = ({ orientation, timelineContent }: TimelineProps) => {
       evenTimelineNode: styles.evenHorizontalTimelineNode,
     };
   }, [orientation]);
-
-  console.log(width);
 
   return (
     <div className={timelineStyles.timelineContainer}>
@@ -88,7 +86,7 @@ const Timeline = ({ orientation, timelineContent }: TimelineProps) => {
                 </Card>
                 <div
                   style={{
-                    width: width / 3.5,
+                    width: layoutWidth / 3.5,
                     minWidth: 165,
                   }}
                   className={detailContainerStyles.join(' ')}
