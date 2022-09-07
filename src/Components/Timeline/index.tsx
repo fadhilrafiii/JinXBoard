@@ -52,6 +52,8 @@ const Timeline = ({ orientation, timelineContent }: TimelineProps) => {
     };
   }, [orientation]);
 
+  console.log(width);
+
   return (
     <div className={timelineStyles.timelineContainer}>
       {timelineContent.map(

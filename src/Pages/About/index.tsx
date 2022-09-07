@@ -8,7 +8,6 @@ import WhySection from './WhySection';
 import styles from './index.module.css';
 
 const About = React.memo(() => {
-  console.log('TEST ABOUT');
   return (
     <div className={styles.container}>
       <WhatSection />
