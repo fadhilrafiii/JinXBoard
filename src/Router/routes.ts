@@ -6,6 +6,21 @@ export const mainRoutes = [
     path: '/',
     iconName: IconName.Home,
   },
+  {
+    label: 'HSE',
+    path: '/hse',
+    iconName: IconName.Earth,
+  },
+  {
+    label: 'Flow Assurance',
+    path: '/flow-assurance',
+    iconName: IconName.Cycle,
+  },
+  {
+    label: 'Power Plant',
+    path: '/power-plant',
+    iconName: IconName.Circuit,
+  },
 ];
 
 export const secondaryRoutes = [

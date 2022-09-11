@@ -14,6 +14,7 @@
   --secondary-color-light: #414758;
   --secondary-color-dark: #17191d;
   --destructive-color: #881D1D;
+  --grey-color: #C7C7C7;
 
   /* Font Family */
   --font-family-heading: Inter, Helvetica, sans-serif;
@@ -100,6 +101,7 @@ svg {
 /* Scrollbar section */
 ::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -110,12 +112,12 @@ svg {
 ::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
   border-radius: var(--border-radius-m);
-  background-color: #e7e7e7;
+  background-color: var(--secondary-color-light);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary-color-light);
+  background: var(--secondary-color-dark);
 }
 /* Scrollbar end section */
 

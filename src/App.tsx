@@ -2,6 +2,8 @@ import React, { lazy, Suspense } from 'react';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import FlowAssurance from 'Pages/FlowAssurance';
+
 import BasePage from 'Layouts/BasePage';
 
 import Loading from 'Components/Loading';
@@ -19,6 +21,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/development-plan" element={<DevelopmentPlan />} />
+            <Route path="/flow-assurance" element={<FlowAssurance />} />
           </Routes>
         </Suspense>
       </BasePage>
