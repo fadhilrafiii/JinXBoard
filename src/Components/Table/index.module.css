@@ -1,0 +1,39 @@
+.tableContainer {
+  max-height: 80vh;
+  position: relative;
+  overflow: auto;
+  border: 1px solid var(--secondary-color-light);
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 500px;
+  height: 100%;
+}
+
+.th {
+  position: sticky;
+  background-color: var(--secondary-color-light);
+  color: white;
+  font-weight: 500;
+  outline: 1px solid var(--secondary-color-dark);
+  height: 48px;
+}
+
+.td {
+  padding: var(--padding-m) var(--padding-l);
+  text-align: center;
+}
+
+.thead tr:first-child th {
+  top: 0;
+}
+
+.thead tr:last-child th {
+  top: 48px;
+}
+
+.tbody tr th {
+  top: 96px;
+}
