@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&display=swap');
+@import url('https://cdn.syncfusion.com/ej2/material.css');
 
 :root {
   /* Colors */
   --primary-color: #016439;
+  --primary-color-10: rgb(1, 100, 57, 0.10);
   --primary-color-80: rgba(1, 100, 57, 0.80);
   --primary-color-light: #03a55f;
   --primary-color-light-80: rgba(3, 165, 95, 0.80);
@@ -14,7 +16,15 @@
   --secondary-color-light: #414758;
   --secondary-color-dark: #17191d;
   --destructive-color: #881D1D;
-  --grey-color: #C7C7C7;
+  --destructive-color-10: rgb(136, 29, 29, 0.10);
+  --destructive-color-dark: #440000;
+  --destructive-color-10: rgb(136, 29, 29, 0.10);
+  --warning-color: #ffcc00;
+  --warning-color-dark: #d99801;
+  --warning-color-10: rgba(255, 204, 0, 0.1);
+  --grey-color-light: #e5e5e5;
+  --grey-color: #b1b1b1;
+  --grey-color-dark: #555555;
 
   /* Font Family */
   --font-family-heading: Inter, Helvetica, sans-serif;
@@ -143,4 +153,34 @@ svg {
 .slick-slide.slick-current img {
   filter: brightness(100%) !important;
   -webkit-filter: brightness(100%) !important;
+}
+
+/* Styling datetime picker */
+.e-active {
+  color: var(--primary-color) !important;
+}
+
+.e-input-group::before {
+  background-color: var(--primary-color) !important;
+}
+
+.e-input-group::after {
+  background-color: var(--primary-color) !important;
+}
+
+.e-calendar .e-header .e-title, .e-bigger.e-small .e-calendar .e-header .e-title {
+  font-family: var(--font-family-paragraph) !important;
+}
+
+.e-calendar .e-content span.e-day, .e-bigger.e-small .e-calendar .e-content span.e-day {
+  font-family: var(--font-family-paragraph) !important;
+}
+
+.e-calendar .e-btn.e-today.e-flat.e-primary, .e-calendar .e-css.e-btn.e-today.e-flat.e-primary {
+  color: var(--primary-color);
+}
+
+.e-calendar .e-content td.e-focused-date.e-today span.e-day {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }

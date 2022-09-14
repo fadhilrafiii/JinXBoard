@@ -1,0 +1,10 @@
+.datetimePickerContainer > span {
+  background-color: white !important;
+  padding: var(--padding-xs) var(--padding-l);
+  border-radius: var(--border-radius-s) var(--border-radius-s) 0 0!important;
+}
+
+.datetimePicker {
+  font-size: 16px !important;
+  font-family: var(--font-family-paragraph) !important;
+}
