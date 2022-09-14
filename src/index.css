@@ -194,12 +194,32 @@ svg {
   font-family: var(--font-family-paragraph) !important;
 }
 
+.e-calendar .e-content td:hover span.e-day, .e-calendar .e-content td:focus span.e-day, .e-bigger.e-small .e-calendar .e-content td:hover span.e-day, .e-bigger.e-small .e-calendar .e-content td:focus span.e-day {
+  color: var(--primary-color);
+  background-color: white;
+  border: 1px solid var(--primary-color);
+}
+
+
 .e-calendar .e-btn.e-today.e-flat.e-primary, .e-calendar .e-css.e-btn.e-today.e-flat.e-primary {
   color: var(--primary-color);
 }
 
 .e-calendar .e-content td.e-focused-date.e-today span.e-day {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.e-calendar .e-content td.e-focused-date.e-today:hover span.e-day {
+  background-color: var(--primary-color);
+  color: white;
+  border: 1px solid var(--primary-color);
+}
+
+.e-calendar .e-content td.e-focused-date span.e-day {
   color: var(--primary-color);
+  background-color: white;
   border-color: var(--primary-color);
 }
 /* End datetime picker section */

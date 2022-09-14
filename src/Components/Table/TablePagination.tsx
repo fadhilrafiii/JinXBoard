@@ -23,6 +23,7 @@ const TablePagination = ({ currentPage, totalPages, actionChangePage }: TablePag
 
   const shouldDisablePreviousButton = currentPage === 1;
   const shouldDisableNextButton = currentPage === totalPages;
+  const shouldDisableInputPage = totalPages === 1;
 
   return (
     <div className={styles.pagination}>
@@ -35,7 +36,13 @@ const TablePagination = ({ currentPage, totalPages, actionChangePage }: TablePag
       </button>
       <div className={styles.pageIndicator}>
         <span>Page</span>
-        <input value={currentPage} type="number" pattern="[0-9]{0,5}" onChange={actionInputPage} />
+        <input
+          disabled={shouldDisableInputPage}
+          value={currentPage}
+          type="number"
+          pattern="[0-9]{0,5}"
+          onChange={actionInputPage}
+        />
         <span>{`of ${totalPages}`}</span>
       </div>
       <button

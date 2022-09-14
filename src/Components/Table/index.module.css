@@ -58,7 +58,7 @@
 
 .pagination input {
   margin: 0 var(--padding-m);
-  width: 56px;
+  width: 64px;
   font-size: 16px;
   padding: var(--padding-xs);
   text-align: center;

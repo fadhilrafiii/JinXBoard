@@ -19,7 +19,7 @@ const HSE = () => {
     startDate: moment().subtract(7, 'days').toDate(),
     endDate: moment().toDate(),
     page: 1,
-    totalPages: 20,
+    totalPages: 1,
   });
 
   const actionChangeFilterType = (value: RadioButtonValue) => {
@@ -32,8 +32,18 @@ const HSE = () => {
   const actionChangeFilterDateTime = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
+    const complementDate: keyof HSEHeaderFilter = name === 'startDate' ? 'endDate' : 'startDate';
+
+    let shouldUnsetComplementData = false;
+    if (
+      (name === 'startDate' && moment(value).isAfter(moment(filter.endDate))) ||
+      (name === 'endDate' && moment(value).isBefore(moment(filter.startDate)))
+    )
+      shouldUnsetComplementData = true;
+
     setFilter((prevFilter: HSEHeaderFilter) => ({
       ...prevFilter,
+      [complementDate]: shouldUnsetComplementData ? undefined : prevFilter[complementDate],
       [name]: value,
     }));
   };
