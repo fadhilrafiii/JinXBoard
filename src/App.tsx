@@ -11,6 +11,7 @@ const About = lazy(() => import('Pages/About'));
 const DevelopmentPlan = lazy(() => import('Pages/DevelopmentPlan'));
 const FlowAssurance = lazy(() => import('Pages/FlowAssurance'));
 const HSE = lazy(() => import('Pages/HSE'));
+const PowerPlant = lazy(() => import('Pages/PowerPlant'));
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/development-plan" element={<DevelopmentPlan />} />
             <Route path="/flow-assurance" element={<FlowAssurance />} />
             <Route path="/hse" element={<HSE />} />
+            <Route path="/power-plant" element={<PowerPlant />} />
           </Routes>
         </Suspense>
       </BasePage>

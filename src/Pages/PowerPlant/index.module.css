@@ -1,0 +1,64 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  gap: var(--padding-xl) var(--padding-xl);
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-wrap: wrap;
+  }
+}
+
+.header > div {
+  width: 100%;
+}
+
+.statusBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.statusBox h3 {
+  margin-bottom: var(--padding-s);
+}
+
+.statusBox > span {
+  font-size: 12px;
+  margin-top: var(--padding-s);
+}
+
+.statusBox > span:last-child {
+  position: absolute;
+  right: var(--padding-xl);
+  bottom: var(--padding-xl);
+  width: calc(100% - 2 * var(--padding-xl));
+  text-align: right;
+}
+
+.statusBox > p {
+  margin-bottom: var(--padding-xxxl);
+}
+
+.filterBox {
+  background-color: var(--grey-color-light);
+  border-radius: var(--border-radius-s);
+  padding: var(--padding-l);
+}
+
+.label {
+  margin-bottom: var(--padding-s);
+  font-size: 14px;
+  color: var(--grey-color-dark);
+}
+
+.filterDate {
+  display: flex;
+  gap: var(--padding-l);
+  margin-top: var(--padding-xl);
+}
+
+.filterDate > div {
+  width: 100%;
+}

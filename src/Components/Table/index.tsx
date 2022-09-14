@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Column } from 'react-table';
-
 import Button, { ButtonTheme, ButtonType } from 'Components/Button';
 
 import { FileType } from 'Shared/Types/General';
@@ -14,7 +12,8 @@ import styles from './index.module.css';
 interface TableProps {
   actionChangePage?: (page: number) => void;
   actionExportData?: (fileType: FileType) => void;
-  columns: Column<object>[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  columns: any[];
   currentPage?: number;
   data: object[];
   shouldShowPagination?: boolean;

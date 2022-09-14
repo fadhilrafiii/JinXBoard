@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { Cell, Column, ColumnInstance, HeaderGroup, Row, useTable } from 'react-table';
+import { Cell, ColumnInstance, HeaderGroup, Row, useTable } from 'react-table';
 
 import styles from './index.module.css';
 
 interface MainTableProps {
-  columns: Column<object>[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  columns: any[];
   data: object[];
 }
 
