@@ -1,0 +1,71 @@
+.button {
+  padding: var(--padding-l);
+  min-width: 100px;
+  border-radius: var(--border-radius-s);
+  font-size: 16px;
+  font-weight: 500;
+  border: 1.5px solid;
+  outline: none;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.primary.filled {
+  background-color: var(--primary-color-light);
+  color: white;
+  border-color: 1px solid var(--primary-color-light);
+}
+
+.primary.filled:hover, .primary.filled:active {
+  background-color: var(--primary-color);
+}
+
+.primary.outlined {
+  background-color: white;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.primary.outlined:hover, .primary.filled:active {
+  background-color: var(--grey-color-light);
+}
+
+.secondary.filled {
+  background-color: var(--secondary-color-light);
+  color: white;
+  border-color: 1px solid var(--secondary-color-light);
+}
+
+.secondary.filled:hover, .primary.filled:active {
+  background-color: var(--secondary-color);
+}
+
+.secondary.outlined {
+  background-color: white;
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.secondary.outlined:hover, .primary.filled:active {
+  background-color: var(--grey-color-light);
+}
+
+.destructive.filled {
+  background-color: var(--destructive-color);
+  color: white;
+  border-color: 1px solid var(--destructive-color-light);
+}
+
+.destructive.filled:hover, .primary.filled:active {
+  background-color: var(--destructive-color-dark);
+}
+
+.destructive.outlined {
+  background-color: white;
+  color: var(--destructive-color);
+  border-color: var(--destructive-color);
+}
+
+.destructive.outlined:hover, .primary.filled:active {
+  background-color: var(--grey-color-light);
+}
