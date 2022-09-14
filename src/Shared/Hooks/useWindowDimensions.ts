@@ -26,7 +26,7 @@ const useWindowDimensions = () => {
     setWindowDimensions(getWindowDimensions(isSidebarOpen));
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [isSidebarOpen]);
+  }, [dispatch, isSidebarOpen]);
 
   return windowDimensions;
 };
