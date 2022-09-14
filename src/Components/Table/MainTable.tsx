@@ -19,7 +19,11 @@ const MainTable = ({ columns, data }: MainTableProps) => {
     <table {...getTableProps()} cellSpacing={0} className={styles.table}>
       <thead className={styles.thead}>
         {headerGroups.map((headerGroup: HeaderGroup, index: number) => (
-          <tr {...headerGroup.getHeaderGroupProps()} key={index}>
+          <tr
+            {...headerGroup.getHeaderGroupProps()}
+            key={index}
+            className={index === 1 ? styles.subHeader : styles.tr}
+          >
             {headerGroup.headers.map((column: ColumnInstance, index: number) => (
               <th {...column.getHeaderProps()} key={index} className={styles.th}>
                 {column.render('Header')}

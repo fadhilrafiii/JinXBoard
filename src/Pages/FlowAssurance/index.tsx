@@ -9,7 +9,7 @@ const FlowAssurance = () => {
 
   return (
     <div>
-      <Table columns={columns} data={data} />
+      <Table columns={columns} data={data} title="Flow Assurance Data" />
     </div>
   );
 };

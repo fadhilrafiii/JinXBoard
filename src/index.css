@@ -63,6 +63,10 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background-color: var(--primary-color-light) !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -106,6 +110,14 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.green-text {
+  color: var(--primary-color) !important;
 }
 
 /* Scrollbar section */
@@ -154,11 +166,17 @@ svg {
   filter: brightness(100%) !important;
   -webkit-filter: brightness(100%) !important;
 }
+/* React slick end section */
 
 /* Styling datetime picker */
 .e-active {
   color: var(--primary-color) !important;
 }
+
+.e-input-group > .e-input::selection {
+  background-color: var(--primary-color-light) !important;
+}
+
 
 .e-input-group::before {
   background-color: var(--primary-color) !important;
@@ -184,3 +202,4 @@ svg {
   color: var(--primary-color);
   border-color: var(--primary-color);
 }
+/* End datetime picker section */

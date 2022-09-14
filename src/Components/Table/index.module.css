@@ -1,5 +1,16 @@
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--padding-l);
+}
+
+.tableTitle {
+  color: var(--secandary-color-light);
+}
+
 .tableContainer {
-  max-height: 80vh;
+  max-height: 77vh;
   position: relative;
   overflow: auto;
   border: 1px solid var(--secondary-color-light);
@@ -19,21 +30,46 @@
   font-weight: 500;
   outline: 1px solid var(--secondary-color-dark);
   height: 48px;
-}
-
-.td {
-  padding: var(--padding-m) var(--padding-l);
-  text-align: center;
-}
-
-.thead tr:first-child th {
   top: 0;
 }
 
-.thead tr:last-child th {
+.td {
+  padding: var(--padding-l);
+  text-align: center;
+}
+
+.subHeader {
   top: 48px;
 }
 
 .tbody tr th {
   top: 96px;
+}
+
+.pagination {
+  width: 100%;
+  margin-top: var(--padding-l);
+  border-radius: var(--border-radius-s);
+  padding: var(--padding-xl);
+  background-color: var(--grey-color-light);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pagination input {
+  margin: 0 var(--padding-m);
+  width: 56px;
+  font-size: 16px;
+  padding: var(--padding-xs);
+  text-align: center;
+}
+
+.previousButton, .nextButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.nextButton {
+  transform: rotate(180deg);
 }

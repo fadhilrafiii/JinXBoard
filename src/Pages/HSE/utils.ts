@@ -1,11 +1,34 @@
-import moment from 'moment';
+import { useMemo } from 'react';
 
-import { HSEHeaderFilter } from './types';
+import { RadioButtonOption, RadioButtonValue } from 'Components/RadioButtonList';
 
-export const getHSEStatusDescription = (filterStatus: HSEHeaderFilter) => {
-  const { dataType, startDate, endDate } = filterStatus;
+import { K_FILTER_TYPE_OPTIONS, MOCK_DATA } from './constants';
 
-  return `Showing status for ${dataType} from ${moment(startDate).format(
-    'MMM DD YYYY HH:mm',
-  )} to ${moment(endDate).format('MMM DD YYYY HH:mm')}`;
+export const useHSEData = () => {
+  const columns = useMemo(
+    () => [
+      {
+        Header: 'Date',
+        accessor: 'date',
+      },
+      {
+        Header: 'Time',
+        accessor: 'time',
+      },
+      {
+        Header: 'Concentration (M)',
+        accessor: 'existing',
+      },
+    ],
+    [],
+  );
+
+  return {
+    columns,
+    data: MOCK_DATA,
+  };
 };
+
+export const getLabelDataTypeFromValue = (value: RadioButtonValue) =>
+  K_FILTER_TYPE_OPTIONS.find(({ value: val }: RadioButtonOption) => val === value)?.label ||
+  'Unknown';
