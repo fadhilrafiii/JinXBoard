@@ -1,0 +1,48 @@
+.container {
+  padding: var(--padding-xl);
+  padding-left: var(--padding-xxl);
+  position: relative;
+  border-radius: var(--border-radius-s);
+  overflow: hidden;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.green {
+  background-color: var(--primary-color-10);
+}
+
+.green::after {
+  background-color: var(--primary-color);
+}
+
+.green :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--primary-color);
+}
+
+.green :is(p, label, span) {
+  color: var(--primary-color-dark);
+}
+
+.red {
+  background-color: var(--destructive-color-10);
+}
+
+.red::after {
+  background-color: var(--destructive-color);
+}
+
+.red :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--destructive-color);
+}
+
+.red :is(p, label) {
+  color: var(--destructive-color-dark);
+}
