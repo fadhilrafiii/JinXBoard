@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  column-gap: var(--padding-xl);
+  row-gap: var(--padding-l);
+}
+
+.horizontal {
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.horizontal > div {
+  width: 100%;
+}
+
+.radioContainer {
+  display: flex;
+  cursor: pointer;
+}
+
+.radio {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--primary-color);
+  margin-right: var(--padding-m);
+  border-radius: var(--border-radius-circle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radioSelected {
+  width: 14px;
+  height: 14px;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius-circle);
+}
+
