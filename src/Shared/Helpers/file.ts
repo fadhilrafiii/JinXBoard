@@ -27,6 +27,15 @@ export const exportData = (fileType: FileType, filename: string, data: any) => {
   }
 };
 
+export const downloadFile = (objectURL: string, filename: string) => {
+  const a = window.document.createElement('a');
+  a.href = objectURL;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+};
+
 export const exportExcel = (filename: string, data: any) => {
   const workBook = utils.book_new();
   const sheetData = utils.json_to_sheet(data);
@@ -46,12 +55,5 @@ export const exportCSV = (filename: string, data: any) => {
 
   const navigator: MyNavigator = window.navigator;
   if (navigator.msSaveBlob) navigator.msSaveBlob(blob, filename);
-  else {
-    const a = window.document.createElement('a');
-    a.href = window.URL.createObjectURL(blob);
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  }
+  else downloadFile(window.URL.createObjectURL(blob), filename);
 };

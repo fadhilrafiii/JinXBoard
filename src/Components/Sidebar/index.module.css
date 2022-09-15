@@ -12,6 +12,11 @@
   position: sticky;
   top: var(--padding-xl);
   z-index: 100;
+  overflow: scroll;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
 }
 
 .wrappedContainer {
@@ -27,7 +32,13 @@
   transition: all .2s;
   position: sticky;
   top: var(--padding-xl);
+  overflow: auto;
 }
+
+.wrappedContainer::-webkit-scrollbar {
+  display: none;
+}
+
 
 .smallLogo {
   display: flex;

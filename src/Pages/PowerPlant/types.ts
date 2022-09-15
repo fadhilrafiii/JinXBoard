@@ -7,3 +7,10 @@ export type PowerPlantStatusHeaderType = {
   page: number;
   totalPages: number;
 };
+
+export type PowerPlantDataType = {
+  date: string;
+  time: string;
+  existing: number;
+  projection: number;
+};

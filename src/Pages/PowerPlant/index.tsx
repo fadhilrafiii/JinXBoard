@@ -3,17 +3,24 @@ import React, { useState } from 'react';
 import moment from 'moment';
 
 import { RadioButtonValue } from 'Components/RadioButtonList';
+import Tab from 'Components/Tab';
 
 import { FileType } from 'Shared/Types/General';
 
 import { exportData, getFullFilenameWithFilter } from 'Shared/Helpers/file';
 
+import { K_DATA_VISUALIZATION_TYPE_TABS } from 'Shared/Constants/General';
+
+import PowerPlantChart from './Components/PowerPlantChart';
 import PowerPlantStatusHeader from './Components/PowerPlantStatusHeader';
 import PowerPlantTable from './Components/PowerPlantTable';
 import { K_FILTER_TYPE_OPTIONS, MOCK_DATA } from './constants';
 import { PowerPlantStatusHeaderType } from './types';
+import { usePowerPlantData } from './utils';
 
 const PowerPlant = () => {
+  const { columns, data } = usePowerPlantData();
+  const [selectedVisualizationTab, setSelectedVisualizatonTab] = useState<number>(0);
   const [filter, setFilter] = useState<PowerPlantStatusHeaderType>({
     dataType: K_FILTER_TYPE_OPTIONS[0].value,
     startDate: moment().subtract(7, 'days').toDate(),
@@ -56,6 +63,8 @@ const PowerPlant = () => {
     }));
   };
 
+  const actionChangeTab = (tabIdx: number) => setSelectedVisualizatonTab(tabIdx);
+
   const actionExportData = (fileType: FileType) => {
     const { startDate, endDate } = filter;
     const baseFilename = 'Power Plant Decibel';
@@ -75,12 +84,22 @@ const PowerPlant = () => {
       />
       <br />
       <br />
-      <PowerPlantTable
-        actionChangePage={actionChangePage}
-        actionExportData={actionExportData}
-        page={filter.page}
-        totalPages={filter.totalPages}
+      <Tab
+        selectedTab={selectedVisualizationTab}
+        tabs={K_DATA_VISUALIZATION_TYPE_TABS}
+        actionChangeTab={actionChangeTab}
       />
+      {selectedVisualizationTab === 0 && (
+        <PowerPlantTable
+          actionChangePage={actionChangePage}
+          actionExportData={actionExportData}
+          columns={columns}
+          data={data}
+          page={filter.page}
+          totalPages={filter.totalPages}
+        />
+      )}
+      {selectedVisualizationTab === 1 && <PowerPlantChart data={data} />}
     </>
   );
 };
