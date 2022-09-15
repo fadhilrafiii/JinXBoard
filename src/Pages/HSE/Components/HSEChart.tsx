@@ -2,15 +2,15 @@ import React, { useMemo } from 'react';
 
 import { LineChart } from 'Components/Chart';
 
-import { PowerPlantDataType } from '../types';
+import { HSEDataType } from '../types';
 import { generateChartData } from '../utils';
 
-interface PowerPlantChartProps {
-  data: PowerPlantDataType[];
+interface HSEChartProps {
+  data: HSEDataType[];
   shownData?: number;
 }
 
-const PowerPlantChart = ({ data, shownData = 10 }: PowerPlantChartProps) => {
+const HSEChart = ({ data, shownData = 20 }: HSEChartProps) => {
   const { xValues, chartData } = useMemo(
     () => generateChartData(data, shownData),
     [data, shownData],
@@ -18,12 +18,12 @@ const PowerPlantChart = ({ data, shownData = 10 }: PowerPlantChartProps) => {
 
   return (
     <LineChart
-      id="powerplant-line-chart"
+      id="hse-line-chart"
       xValues={xValues}
       data={chartData}
-      title="Power Plant Decibel Chart"
+      title="HSE Concentration Chart"
     />
   );
 };
 
-export default PowerPlantChart;
+export default HSEChart;

@@ -1,0 +1,25 @@
+.firstRow {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--padding-xxxl);
+}
+
+.firstRow > div {
+  width: 100%;
+}
+
+.secondRow {
+  display: flex;
+  justify-content: center;
+  padding: 64px var(--padding-xxxl);
+  gap: var(--padding-xxl);
+  align-items: flex-start;
+}
+
+.secondRow > div:last-child {
+  flex: 0 0 15%;
+}
+
+.secondRow > div:first-child {
+  flex: 0 0 60%;
+}

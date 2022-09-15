@@ -226,6 +226,6 @@ svg {
 
 canvas {
   opacity: 0;
-  margin-top: 1000px;
+  margin-top: 700px;
   transition: all 0.3s;
 }

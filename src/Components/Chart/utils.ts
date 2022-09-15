@@ -56,9 +56,9 @@ export const useLineChartData = (
       },
       responsive: true,
       animation: {
-        duration: 1000,
+        duration: 700,
         easing: 'easeInCubic' as ChartAnimationEasing,
-        delay: 1000,
+        delay: 300,
         loop: false,
       },
       plugins: {
@@ -69,8 +69,8 @@ export const useLineChartData = (
       scales: {
         y: {
           title: { display: true, text: yLabel, font: { size: 16 }, padding: 12 },
-          min: min - Math.ceil((max - min) / 2),
-          max: max + Math.floor((max - min) / 2),
+          min: min - (Math.ceil((max - min) / 2) || 5),
+          max: max + (Math.ceil((max - min) / 2) || 5),
         },
         x: {
           title: { display: true, text: xLabel, font: { size: 16 }, padding: 12 },

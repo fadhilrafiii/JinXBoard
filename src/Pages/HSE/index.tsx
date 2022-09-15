@@ -1,8 +1,7 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 
 import moment from 'moment';
 
-import { LineChart } from 'Components/Chart';
 import { RadioButtonValue } from 'Components/RadioButtonList';
 import Tab from 'Components/Tab';
 
@@ -12,11 +11,12 @@ import { exportData, getFullFilenameWithFilter } from 'Shared/Helpers/file';
 
 import { K_DATA_VISUALIZATION_TYPE_TABS } from 'Shared/Constants/General';
 
+import HSEChart from './Components/HSEChart';
 import HSEStatusHeader from './Components/HSEStatusHeader';
 import HSETable from './Components/HSETable';
 import { K_FILTER_TYPE_OPTIONS, MOCK_DATA } from './constants';
 import { HSEHeaderFilter } from './types';
-import { generateChartData, useHSEData } from './utils';
+import { useHSEData } from './utils';
 
 const HSE = () => {
   const { columns, data } = useHSEData();
@@ -74,8 +74,6 @@ const HSE = () => {
     exportData(fileType, filename, data);
   };
 
-  const { xValues, chartData } = useMemo(() => generateChartData(data, 10), [data]);
-
   return (
     <>
       <HSEStatusHeader
@@ -100,14 +98,7 @@ const HSE = () => {
           totalPages={filter.totalPages}
         />
       )}
-      {selectedVisualizationTab === 1 && (
-        <LineChart
-          id="hse-line-chart"
-          xValues={xValues}
-          data={chartData}
-          title="HSE Concentration Chart"
-        />
-      )}
+      {selectedVisualizationTab === 1 && <HSEChart data={data} />}
     </>
   );
 };
