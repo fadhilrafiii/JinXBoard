@@ -31,6 +31,7 @@
   outline: 1px solid var(--secondary-color-dark);
   height: 48px;
   top: 0;
+  padding: var(--padding-m);
 }
 
 .td {

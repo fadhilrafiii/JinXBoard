@@ -10,7 +10,7 @@ interface HSEChartProps {
   shownData?: number;
 }
 
-const HSEChart = ({ data, shownData = 20 }: HSEChartProps) => {
+const HSEChart = ({ data, shownData = 24 }: HSEChartProps) => {
   const { xValues, chartData } = useMemo(
     () => generateChartData(data, shownData),
     [data, shownData],

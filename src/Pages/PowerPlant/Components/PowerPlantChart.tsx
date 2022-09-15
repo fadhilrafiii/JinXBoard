@@ -10,7 +10,7 @@ interface PowerPlantChartProps {
   shownData?: number;
 }
 
-const PowerPlantChart = ({ data, shownData = 10 }: PowerPlantChartProps) => {
+const PowerPlantChart = ({ data, shownData = 24 }: PowerPlantChartProps) => {
   const { xValues, chartData } = useMemo(
     () => generateChartData(data, shownData),
     [data, shownData],

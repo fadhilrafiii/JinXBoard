@@ -15,8 +15,6 @@ export const useFlowAssuranceData = () => {
       {
         Header: 'Date',
         accessor: 'date',
-        Cell: ({ value }: { value: string }) =>
-          moment(value, 'YYYYMMDD', true).format('YYYY-MM-DD'),
       },
       {
         Header: 'Pressure (Bar)',
